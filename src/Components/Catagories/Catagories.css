@@ -1,6 +1,11 @@
 
 
-
+.catagory{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+}
 .catagory-single{
     display: flex;
     justify-content: center;

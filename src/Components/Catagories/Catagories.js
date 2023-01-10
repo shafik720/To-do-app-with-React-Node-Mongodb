@@ -1,6 +1,7 @@
 import React from 'react';
-import workImg from '../../Utilities/Img/suitcase.png';
 import './Catagories.css';
+import workImg from '../../Utilities/Img/suitcase.png';
+import personalImg from '../../Utilities/Img/man (1).png';
 
 const Catagories = () => {
     return (
@@ -10,6 +11,18 @@ const Catagories = () => {
                 <div className="catagory-single">
                     <span><img src={workImg} alt="" /></span>
                     <p>Work</p>
+                </div>
+                <div className="catagory-single">
+                    <span><img src={personalImg} alt="" /></span>
+                    <p>Personal</p>
+                </div>
+                <div className="catagory-single">
+                    <span><img src={workImg} alt="" /></span>
+                    <p>Shopping</p>
+                </div>
+                <div className="catagory-single">
+                    <span><img src={workImg} alt="" /></span>
+                    <p>Sports</p>
                 </div>
             </div>
         </div>
