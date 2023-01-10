@@ -10,6 +10,12 @@
 .left-part button{
     width: 30px;
     height: 30px;
+    background: none;
+    border: 2px solid #ddd;
+    transition: all 0.2s;
+}
+.left-part button:hover{
+    border: 2px solid black; 
 }
 .right-part span{
     /* border: 3px solid #ddd; */
