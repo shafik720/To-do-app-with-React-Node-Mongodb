@@ -1,0 +1,18 @@
+
+.banner-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0;
+    /* width: 90%; */
+    background: linear-gradient(45deg, #90B8F3, #8cb7f2c0);
+    padding: 5px 10px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+.banner-left h2{
+    color: white;
+}
+.banner-right img{
+    width: 50px;
+}
