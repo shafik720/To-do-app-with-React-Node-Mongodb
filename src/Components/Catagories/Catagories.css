@@ -1,0 +1,27 @@
+
+
+
+.catagory-single{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 7px;
+}
+.catagory-single span{
+    border: 2px solid #ddd;
+    width:  30px;
+    height: 30px;
+    padding: 10px;
+    display: block;
+    border-radius: 10px;
+
+}
+.catagory-single p{
+    margin: 0;
+    font-weight: 600;
+    color: rgb(97, 95, 95);
+}
+.catagory-single span img{ 
+    width: 100%;
+}
