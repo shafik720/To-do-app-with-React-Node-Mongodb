@@ -6,12 +6,14 @@
     margin: 25px 0;
     /* width: 90%; */
     background: linear-gradient(45deg, #90B8F3, #8cb7f2c0);
-    padding: 5px 10px;
+    padding: 5px 15px;
     border-radius: 15px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
-.banner-left h2{
+.banner-left h3{
     color: white;
+    /* font-weight: 600; */
+    color: #2a2a2a;
 }
 .banner-right img{
     width: 50px;
