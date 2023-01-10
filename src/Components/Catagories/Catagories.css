@@ -12,7 +12,9 @@
     align-items: center;
     flex-direction: column;
     row-gap: 7px;
+    cursor: pointer;
 }
+
 .catagory-single span{
     border: 2px solid #ddd;
     width:  30px;
@@ -20,7 +22,11 @@
     padding: 10px;
     display: block;
     border-radius: 10px;
-
+    transition: all 0.2s ease;
+}
+.catagory-single span:hover{
+    border: 2px solid grey;
+    box-shadow: 2px 5px 5px rgba(0,0,0,0.5);
 }
 .catagory-single p{
     margin: 0;
