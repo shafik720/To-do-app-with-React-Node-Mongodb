@@ -2,7 +2,7 @@ import React from 'react';
 import './Catagories.css';
 import workImg from '../../Utilities/Img/suitcase.png';
 import personalImg from '../../Utilities/Img/man (1).png';
-import shoppingImg from '../../Utilities/Img/shopping-bag.png';
+import shoppingImg from '../../Utilities/Img/shopping-bag (2).png';
 import sportsImg from '../../Utilities/Img/football.png';
 
 const Catagories = () => {
