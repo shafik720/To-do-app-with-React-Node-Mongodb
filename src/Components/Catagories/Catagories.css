@@ -1,5 +1,11 @@
 
 
+.catagory-div{
+    margin: 35px 0;
+}
+.catagory-div h3{
+    color: #2a2a2a;
+}
 .catagory{
     display: flex;
     justify-content: space-evenly;
