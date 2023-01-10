@@ -12,7 +12,7 @@ const Header = () => {
                 <button><FontAwesomeIcon icon={faBars} /></button>
             </div>
             <div className="right-part">
-                <span><FontAwesomeIcon icon={faUser} /></span>
+                <span><img src="https://i.ibb.co/J5bQFs4/1668538578655.png" alt="" /></span>
             </div>
         </div>
     );
