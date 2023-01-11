@@ -1,7 +1,7 @@
 import React from 'react';
 import './BottomSection.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faCalendar, faPlusCircle, faGear, faClipboard , faMultiply } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faCalendar, faPlusCircle, faGear, faClipboard, faMultiply } from '@fortawesome/free-solid-svg-icons';
 import { useForm } from 'react-hook-form';
 
 
@@ -17,14 +17,18 @@ const BottomSection = () => {
     //this function will be triggered when 'Plus icon' is clicked
     function addTask() {
         document.querySelector('.popup-parent').classList.add('active');
-        
-    document.addEventListener('click',(e)=>{
-        // console.log(e.target.className);
-        if(e.target.classList.contains('popup-parent')){
+
+        // closing the popup when user click outside the popup model
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('popup-parent')) {
+                document.querySelector('.popup-parent').classList.remove('active');
+            }
+        })
+
+        // closing the popup when user click the close button at the top right corner of the modal
+        document.querySelector('.popup-close-button').addEventListener('click',()=>{
             document.querySelector('.popup-parent').classList.remove('active');
-            console.log('ok');
-        }
-    })
+        })
     }
     return (
         <div className="">
