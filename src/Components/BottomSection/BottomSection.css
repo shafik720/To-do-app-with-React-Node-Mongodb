@@ -37,6 +37,7 @@
 }
 .popup-parent.active{
     display: block;
+    pointer-events: auto;
 }
 .popup-model{
     background: white;

@@ -17,6 +17,14 @@ const BottomSection = () => {
     //this function will be triggered when 'Plus icon' is clicked
     function addTask() {
         document.querySelector('.popup-parent').classList.add('active');
+        
+    document.addEventListener('click',(e)=>{
+        // console.log(e.target.className);
+        if(e.target.classList.contains('popup-parent')){
+            document.querySelector('.popup-parent').classList.remove('active');
+            console.log('ok');
+        }
+    })
     }
     return (
         <div className="">
