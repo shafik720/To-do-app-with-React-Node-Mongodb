@@ -1,0 +1,22 @@
+
+
+.bottom-div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    margin-top: 45px;
+}
+
+.add-icon{
+    color: #90B8F3;
+    font-size: 4em;
+}
+
+.single-icon{
+    margin: 0 15px;
+    font-size: 28px;
+    color: rgb(197, 197, 197);
+}
+.bottom-left{
+    
+}
