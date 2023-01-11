@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Components/Header/Header';
 import Banner from './Components/Banner/Banner';
 import Catagories from './Components/Catagories/Catagories';
+import Tasks from './Components/Tasks/Tasks';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header></Header>
       <Banner></Banner>
       <Catagories></Catagories>
+      <Tasks></Tasks>
     </div>
   );
 }
