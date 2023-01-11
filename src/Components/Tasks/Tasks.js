@@ -31,7 +31,7 @@ const Tasks = () => {
     
     return (
         <div className="task-div">
-            <h3>You have {tasks.length} tasks to complete</h3>
+            <h3>You have <span className="text-secondary fw-bold">{tasks.length}</span>  tasks to complete</h3>
             <div className="all-task">
                 {
                     tasks.map(index=><SingleTasks 
