@@ -10,7 +10,8 @@ const Tasks = () => {
         fetch('http://localhost:5000/alltasks')
         .then(res=>res.json())
         .then(data=>setTasks(data))
-    },[tasks])
+    },[tasks]);
+    
     return (
         <div className="task-div">
             <h3>You have {tasks.length} tasks to complete</h3>
