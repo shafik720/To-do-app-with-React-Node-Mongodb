@@ -11,10 +11,24 @@ const BottomSection = () => {
     // react hook form
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
-        console.log(data)
+        fetch('http://localhost:5000/',{
+            method:'POST',
+            headers : {
+                'content-type' : 'application/json'
+            },
+            body : JSON.stringify(data)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data);
+        })
+
+        // fetch('http://localhost:5000/')
+        // .then(res=>res.json())
+        // .then(data=>console.log(data))
     };
 
-    //this function will be triggered when 'Plus icon' is clicked
+    //---------------------------------this function will be triggered when 'Plus icon' is clicked--------------------------------
     function addTask() {
         document.querySelector('.popup-parent').classList.add('active');
 
@@ -28,7 +42,7 @@ const BottomSection = () => {
         // closing the popup when user click the close button at the top right corner of the modal
         document.querySelector('.popup-close-button').addEventListener('click',()=>{
             document.querySelector('.popup-parent').classList.remove('active');
-        })
+        });
     }
     return (
         <div className="">
