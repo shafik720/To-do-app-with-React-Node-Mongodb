@@ -11,6 +11,13 @@ const Tasks = () => {
         .then(res=>res.json())
         .then(data=>setTasks(data))
     },[tasks]);
+
+    const deleteSingleTask = (id) =>{
+        const proceed = window.confirm('Do you want to delete this task ? ');
+        if(proceed){
+            
+        }
+    }
     
     return (
         <div className="task-div">
@@ -20,6 +27,7 @@ const Tasks = () => {
                     tasks.map(index=><SingleTasks 
                         index={index}
                         key = {index._id}
+                        deleteSingleTask = {deleteSingleTask}
                         ></SingleTasks>)
                 }
             </div>
