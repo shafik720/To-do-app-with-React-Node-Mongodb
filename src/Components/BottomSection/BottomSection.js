@@ -16,7 +16,7 @@ const BottomSection = () => {
 
     //this function will be triggered when 'Plus icon' is clicked
     function addTask() {
-        console.log('clicked');
+        document.querySelector('.popup-parent').classList.add('active');
     }
     return (
         <div className="">

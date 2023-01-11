@@ -5,6 +5,9 @@
 }
 .catagory-div h3{
     color: #2a2a2a;
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-left:10px;
 }
 .catagory{
     display: flex;
@@ -23,9 +26,9 @@
 
 .catagory-single span{
     border: 2px solid #ddd;
-    width:  30px;
-    height: 30px;
-    padding: 10px;
+    width:  60px;
+    height: 60px;
+    padding: 7px;
     display: block;
     border-radius: 10px;
     transition: all 0.2s ease;
@@ -40,5 +43,5 @@
     color: rgb(97, 95, 95);
 }
 .catagory-single span img{ 
-    width: 100%;
+    width: 100% !important;
 }

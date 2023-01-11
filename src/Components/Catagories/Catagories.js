@@ -8,7 +8,7 @@ import sportsImg from '../../Utilities/Img/football.png';
 const Catagories = () => {
     return (
         <div className="catagory-div">
-            <h3 className="">Catagories</h3>
+            <h3 className="">Catagories :</h3>
             <div className="catagory">
                 <div className="catagory-single">
                     <span><img src={workImg} alt="" /></span>
