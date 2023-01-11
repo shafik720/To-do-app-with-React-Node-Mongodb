@@ -27,7 +27,7 @@
     display: flex;
     gap: 15px;
 }
-.hover-content-second div{
+.hover-content-second div, .selection-icon{
     position: relative;
     border: 2px solid grey;
     /* padding: 3px 10px; */
@@ -65,4 +65,14 @@
 }
 .delete-task-button{
     color: #407093;
+}
+
+.selection-icon{
+    position: absolute;
+    top: -20px;
+    left: -10px;
+}
+.selection-icon:hover{
+    background: darkcyan;
+    color: white;
 }

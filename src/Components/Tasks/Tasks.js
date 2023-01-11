@@ -29,15 +29,42 @@ const Tasks = () => {
         }
     }
     
+    const[taskId, setTaskId] = useState([]);
+    let arr = [];
+    function selectManyId(id){
+        arr = [...taskId, id];
+        setTaskId(arr);
+    }
+    function deleteMany(){
+        const proceed = window.confirm('Do you want to delete this task ? ');
+        const ids = taskId;
+        if(proceed){
+            const url = `http://localhost:5000/alltasks`;
+            fetch('http://localhost:5000/alltasks',{
+                method : 'DELETE',
+                body : JSON.stringify({ids}),
+                headers : {
+                    'Content-type' : 'application/json'
+                }
+            })
+            .then(res=>res.json())
+            .then(data=>{
+                console.log(data);
+            })
+            .catch((error) => { console.error('Error:', error) });
+        }
+    }
     return (
         <div className="task-div">
             <h3>You have <span className="text-secondary fw-bold">{tasks.length}</span>  tasks to complete</h3>
+            <button onClick={deleteMany}>Delete Many</button>
             <div className="all-task">
                 {
                     tasks.map(index=><SingleTasks 
                         index={index}
                         key = {index._id}
                         deleteSingleTask = {deleteSingleTask}
+                        selectManyId = {selectManyId}
                         ></SingleTasks>)
                 }
             </div>
