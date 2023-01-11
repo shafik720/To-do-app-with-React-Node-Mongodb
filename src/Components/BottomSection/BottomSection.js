@@ -31,7 +31,9 @@ const BottomSection = () => {
                 <div className="popup-model">
                     <h2 className='text-center my-4 fw-bold'>Add a New Task</h2>
                     <form className='submit-form' onSubmit={handleSubmit(onSubmit)}>
-                        <input placeholder='Task Name' {...register("firstName", { required: true, maxLength: 20 })} />
+                        <p className='label-for-task'>Task Name</p>
+                        <input {...register("firstName", { required: true, maxLength: 20 })} />
+                        <p className='label-for-task'>Start Time</p>
                         <input placeholder='Start Time' type="time" {...register("age", { min: 18, max: 99 })} />
                         <input className='submit-task-button' type="submit" />
                     </form>

@@ -71,3 +71,8 @@
     margin-top: 15px;
     margin-bottom: 20px;
 }
+
+.label-for-task{
+    margin-bottom: -5px;
+    font-weight: 600;
+}
