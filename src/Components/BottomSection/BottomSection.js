@@ -8,10 +8,10 @@ import { useForm } from 'react-hook-form';
 
 
 const BottomSection = () => {
-    // react hook form
+    // react hook form functionality
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/',{
+        fetch('http://localhost:5000/addTask',{
             method:'POST',
             headers : {
                 'content-type' : 'application/json'
@@ -20,12 +20,11 @@ const BottomSection = () => {
         })
         .then(res=>res.json())
         .then(data=>{
-            console.log(data);
+            if(data.insertedId){
+                alert('Task added successfully');
+            }
         })
 
-        // fetch('http://localhost:5000/')
-        // .then(res=>res.json())
-        // .then(data=>console.log(data))
     };
 
     //---------------------------------this function will be triggered when 'Plus icon' is clicked--------------------------------
@@ -58,9 +57,9 @@ const BottomSection = () => {
                     <h2 className='text-center my-4 fw-bold'>Add a New Task</h2>
                     <form className='submit-form' onSubmit={handleSubmit(onSubmit)}>
                         <p className='label-for-task'>Task Name</p>
-                        <input {...register("firstName", { required: true, maxLength: 20 })} />
+                        <input {...register("taskName", { required: true, maxLength: 20 })} />
                         <p className='label-for-task'>Start Time</p>
-                        <input placeholder='Start Time' type="time" {...register("age", { min: 18, max: 99 })} />
+                        <input  type="time" {...register("startTime", { min: 18, max: 99 })} />
                         <input className='submit-task-button' type="submit" />
                     </form>
                     <span className='popup-close-button'><FontAwesomeIcon className="" icon={faMultiply} /></span>
