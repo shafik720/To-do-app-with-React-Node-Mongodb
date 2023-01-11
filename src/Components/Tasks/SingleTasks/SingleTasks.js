@@ -5,6 +5,10 @@ import { faTrash , faPen } from '@fortawesome/free-solid-svg-icons';
 const SingleTasks = (props) => {
     const { taskName, startTime, _id } = props.index;
 
+    const deleteSingleTask = (id) =>{
+        console.log(id);
+    }
+
     return (
         <div>
             <div className="single-task">
@@ -20,7 +24,7 @@ const SingleTasks = (props) => {
                         <div className="delete-task-button">
                             <FontAwesomeIcon className="task-edit-button" icon={faPen} />
                         </div>
-                        <div className="delete-task-button">
+                        <div onClick={()=>deleteSingleTask(_id)} draggable className="delete-task-button">
                             <FontAwesomeIcon className="" icon={faTrash} />
                         </div>
                     </div>
