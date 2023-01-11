@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import SingleTasks from './SingleTasks/SingleTasks';
 import './Tasks.css';
 
 const Tasks = () => {
@@ -8,21 +9,18 @@ const Tasks = () => {
     useEffect(()=>{
         fetch('http://localhost:5000/alltasks')
         .then(res=>res.json())
-        .then(data=>console.log(data))
+        .then(data=>setTasks(data))
     },[])
     return (
         <div className="task-div">
-            <h3>You have 10 tasks to complete</h3>
+            <h3>You have {tasks.length} tasks to complete</h3>
             <div className="all-task">
-                <div className="single-task">
-                    <div className="single-task-left">
-                        <input type="radio" name="" id="" />
-                        <p>Coding for 6 hours</p>
-                    </div>
-                    <div className="single-task-right">
-                        <p>9 am</p>
-                    </div>
-                </div>
+                {
+                    tasks.map(index=><SingleTasks 
+                        index={index}
+                        key = {index._id}
+                        ></SingleTasks>)
+                }
             </div>
         </div>
     );
