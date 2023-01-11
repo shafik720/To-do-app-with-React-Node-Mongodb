@@ -15,7 +15,17 @@ const Tasks = () => {
     const deleteSingleTask = (id) =>{
         const proceed = window.confirm('Do you want to delete this task ? ');
         if(proceed){
-            
+            const url = `http://localhost:5000/alltasks/${id}`;
+            fetch(url,{
+                method : 'DELETE'
+            })
+            .then(res=>res.json())
+            .then(data=>{
+                if(data.deletedCount>0){
+                    const remainingTasks = tasks.filter(index=>index._id != id);
+                    setTasks(remainingTasks);
+                }
+            })
         }
     }
     
