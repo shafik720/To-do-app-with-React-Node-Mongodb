@@ -49,6 +49,7 @@
     padding: 10px 15px;
 }
 
+
 .submit-form{
     display: flex;
     flex-direction: column;
@@ -80,4 +81,18 @@
 .label-for-task{
     margin-bottom: -5px;
     font-weight: 600;
+}
+
+.popup-close-button{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: 2px solid grey;    
+    border-radius: 50%;
+    color: grey;
+    width: 20px ;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

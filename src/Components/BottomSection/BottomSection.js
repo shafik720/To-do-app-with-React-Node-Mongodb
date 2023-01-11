@@ -1,7 +1,7 @@
 import React from 'react';
 import './BottomSection.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faCalendar, faPlusCircle, faGear, faClipboard } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faCalendar, faPlusCircle, faGear, faClipboard , faMultiply } from '@fortawesome/free-solid-svg-icons';
 import { useForm } from 'react-hook-form';
 
 
@@ -37,6 +37,7 @@ const BottomSection = () => {
                         <input placeholder='Start Time' type="time" {...register("age", { min: 18, max: 99 })} />
                         <input className='submit-task-button' type="submit" />
                     </form>
+                    <span className='popup-close-button'><FontAwesomeIcon className="" icon={faMultiply} /></span>
                 </div>
             </div>
         </div>
