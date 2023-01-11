@@ -6,6 +6,9 @@
     align-items: flex-end;
     margin-top: 45px;
 }
+.bottom-div span{
+    cursor: pointer;
+}
 
 .add-icon{
     color: #90B8F3;

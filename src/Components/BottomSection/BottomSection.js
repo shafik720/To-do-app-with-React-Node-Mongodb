@@ -7,11 +7,11 @@ import { faHouse, faCalendar, faPlusCircle, faGear, faClipboard } from '@fortawe
 const BottomSection = () => {
     return (
         <div className="bottom-div">
-            <span><FontAwesomeIcon className="single-icon" icon={faHouse} /> </span>
-            <span><FontAwesomeIcon className="single-icon" icon={faCalendar} /> </span>
-            <span><FontAwesomeIcon className="add-icon" icon={faPlusCircle} /> </span>
-            <span><FontAwesomeIcon className="single-icon" icon={faClipboard} /> </span>
-            <span><FontAwesomeIcon className="single-icon" icon={faGear} /> </span>
+            <span draggable><FontAwesomeIcon className="single-icon" icon={faHouse} /> </span>
+            <span draggable><FontAwesomeIcon className="single-icon" icon={faCalendar} /> </span>
+            <span draggable><FontAwesomeIcon className="add-icon" icon={faPlusCircle} /> </span>
+            <span draggable><FontAwesomeIcon className="single-icon" icon={faClipboard} /> </span>
+            <span draggable><FontAwesomeIcon className="single-icon" icon={faGear} /> </span>
         </div>
     );
 };
