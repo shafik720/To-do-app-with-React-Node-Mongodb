@@ -21,7 +21,7 @@
     right: 20px;
     display: flex;
     gap: 15px;
-    /* display: none; */
+    display: none;
 }
 .hover-content-second{
     display: flex;
@@ -58,4 +58,11 @@
 }
 .single-task p{
     margin: 0;
+}
+
+.task-edit-button{
+    color: #2BC48A;
+}
+.delete-task-button{
+    color: #407093;
 }

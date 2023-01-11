@@ -18,7 +18,7 @@ const SingleTasks = (props) => {
                 <div className="hover-content">
                     <div className="hover-content-second">
                         <div className="delete-task-button">
-                            <FontAwesomeIcon className="" icon={faPen} />
+                            <FontAwesomeIcon className="task-edit-button" icon={faPen} />
                         </div>
                         <div className="delete-task-button">
                             <FontAwesomeIcon className="" icon={faTrash} />
