@@ -35,10 +35,14 @@ const Tasks = () => {
         arr = [...taskId, id];
         setTaskId(arr);
 
-        console.log(e.target);
-        // let allSingleTasks = document.querySelectorAll
-        e.target.parentNode.classList.add('selected');
-        e.target.classList.add('selected');
+        if(e.target.classList.contains('selected')){
+            console.log('ok');
+            e.target.classList.remove('selected');
+            e.target.parentNode.classList.remove('selected'); 
+        }else{
+            e.target.classList.add('selected');
+            e.target.parentNode.classList.add('selected'); 
+        }       
     }
     function deleteMany(){
         const proceed = window.confirm('Do you want to delete this task ? ');

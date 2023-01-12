@@ -93,6 +93,7 @@
     color: white;
 }
 .selection-icon.selected{
+    display: flex;
     background: darkcyan;
     color: white;
 }
