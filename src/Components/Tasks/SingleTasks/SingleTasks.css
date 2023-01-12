@@ -17,8 +17,9 @@
 }
 
 .single-task.selected{
-    border: 2px solid darkred;
+    border: 2px solid #90B8F3;
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    background: #90B8F3;
 }
 .hover-content{
     position: absolute;
@@ -91,7 +92,10 @@
     background: darkcyan;
     color: white;
 }
-
+.selection-icon.selected{
+    background: darkcyan;
+    color: white;
+}
 .check-icon{
     pointer-events:none;
 }
