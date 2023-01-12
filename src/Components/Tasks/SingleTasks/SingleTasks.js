@@ -11,8 +11,13 @@ const SingleTasks = (props) => {
         <div>
             <div className="single-task">
                 <div className="single-task-left">
-                    <input type="radio" name="" id="" />
-                    <p>{taskName}</p>
+                    <label className="containers">{taskName}
+                        <input type="checkbox" name="" id=""/>
+                        <span className="checkmark"></span>
+                    </label>
+
+                    {/* <input type="checkbox" name="" className="checkbox-round" />
+                    <label for="checkbbox">{taskName}</label> */}
                 </div>
                 <div className="single-task-right">
                     <p>{startTime}</p>
