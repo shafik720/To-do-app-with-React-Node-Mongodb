@@ -6,16 +6,36 @@ const SingleTasks = (props) => {
     const { taskName, startTime, _id ,action } = props.index;
 
     const [checked,setChecked] = useState(false);
-    function checkingCheckbox(id){
-        console.log(id);
+    function checkingCheckbox(id, actions){
+        console.log(actions);
+        let action = '';
+        // const action = checked ? 'complete' : 'incomplete';
+        if(actions == 'incomplete' ){
+            action = 'complete';
+        }else{
+            action = 'incomplete';
+        }
+        
+        const url = `http://localhost:5000/alltasks/${id}`;
+        fetch(url,{
+            method : 'PUT',
+            headers : {
+                'content-type' : 'application/json'
+            },
+            body : JSON.stringify({action})
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            // console.log('successfully updated !');
+        })
     }
 
     return (
         <div>
             <div className="single-task">
                 <div className="single-task-left w-100">
-                    <label  className={checked || action=='complete' ? "containers active" : "containers"}>{taskName} '&' {action}
-                        <input onClick={()=>{setChecked(!checked);checkingCheckbox(_id);}} type="checkbox" name="" id=""/>
+                    <label  className={checked || action=='complete' ? "containers active" : "containers"}>{taskName}
+                        <input onClick={()=>{setChecked(!checked);checkingCheckbox(_id, action);}} type="checkbox" name="" id=""/>
                         <span className="checkmark"></span>
                     </label>
                 </div>

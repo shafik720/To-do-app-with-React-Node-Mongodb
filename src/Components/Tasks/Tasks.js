@@ -83,7 +83,7 @@ const Tasks = () => {
 
             <div className="all-task">
                 {
-                    tasks.map(index => index.action == '' && <SingleTasks
+                    tasks.map(index => index.action == 'incomplete' && <SingleTasks
                         index={index}
                         key={index._id}
                         deleteSingleTask={deleteSingleTask}
