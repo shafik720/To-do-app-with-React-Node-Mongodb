@@ -11,5 +11,21 @@
 }
 
 .all-task{
-    margin-top: 40px;
+    margin-top: 20px;
+}
+
+
+.selection-text p{
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.selection-text button{
+    border: none;
+    background: #E40D0D;
+    color: white;
+    padding: 5px 15px;
+    font-weight: 500;
+    border-radius: 5px;
 }

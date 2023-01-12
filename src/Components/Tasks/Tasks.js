@@ -78,9 +78,9 @@ const Tasks = () => {
     return (
         <div className="task-div">
             <h3>You have <span className="text-secondary fw-bold">{tasks.length}</span>  tasks to complete</h3>
-            {taskId.length > 0 ? <div className="text-center">
+            {taskId.length > 0 ? <div className="text-center selection-text">
                 <p>Total {taskId.length} task selected </p>
-                <button onClick={deleteMany}>Delete Many</button>
+                <button onClick={deleteMany}>Delete Selected Tasks</button>
             </div> : <></>}
 
             <div className="all-task">
