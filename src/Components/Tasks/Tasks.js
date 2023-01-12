@@ -46,6 +46,11 @@ const Tasks = () => {
         if (e.target.classList.contains('selected')) {
             e.target.classList.remove('selected');
             e.target.parentNode.classList.remove('selected');
+
+            // to remove the id when it's selected
+            let remainingId = taskId.filter(index=> index != id);
+            setTaskId(remainingId);
+
         } else {
             e.target.classList.add('selected');
             e.target.parentNode.classList.add('selected');
@@ -65,7 +70,7 @@ const Tasks = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
+                    setTaskId([]);
                 })
                 .catch((error) => { console.error('Error:', error) });
         }
