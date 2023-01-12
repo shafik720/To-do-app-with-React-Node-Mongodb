@@ -22,7 +22,6 @@ const BottomSection = () => {
         .then(res=>res.json())
         .then(data=>{
             if(data.insertedId){
-                alert('Task added successfully');
                 document.querySelector('.popup-parent').classList.remove('active');
             }
         })

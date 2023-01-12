@@ -1,6 +1,6 @@
 import React from 'react';
 import './SingleTasks.css'; import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash, faPen, faBaby } from '@fortawesome/free-solid-svg-icons';
+import { faTrash, faPen, faCheck } from '@fortawesome/free-solid-svg-icons';
 
 const SingleTasks = (props) => {
     const { taskName, startTime, _id } = props.index;
@@ -29,7 +29,7 @@ const SingleTasks = (props) => {
                 </div>
                 
                 <div draggable onClick={()=>props.selectManyId(_id)} className="selection-icon">
-                        <FontAwesomeIcon className="" icon={faBaby} />
+                        <FontAwesomeIcon className="" icon={faCheck} />
                     </div>
             </div>
         </div>
