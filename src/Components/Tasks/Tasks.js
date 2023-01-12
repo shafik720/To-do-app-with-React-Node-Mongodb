@@ -31,9 +31,13 @@ const Tasks = () => {
     
     const[taskId, setTaskId] = useState([]);
     let arr = [];
-    function selectManyId(id){
+    function selectManyId(id , e){
         arr = [...taskId, id];
         setTaskId(arr);
+
+        console.log(e.target.parentNode);
+        // let allSingleTasks = document.querySelectorAll
+        e.target.parentNode.classList.add('selected');
     }
     function deleteMany(){
         const proceed = window.confirm('Do you want to delete this task ? ');

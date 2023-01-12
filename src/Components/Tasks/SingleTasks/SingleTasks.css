@@ -15,6 +15,11 @@
     border: 2px solid rgba(0,0,0,0.6);
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
+
+.single-task.selected{
+    border: 2px solid darkred;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
 .hover-content{
     position: absolute;
     top: -20px;
@@ -85,4 +90,8 @@
 .selection-icon:hover{
     background: darkcyan;
     color: white;
+}
+
+.check-icon{
+    pointer-events:none;
 }

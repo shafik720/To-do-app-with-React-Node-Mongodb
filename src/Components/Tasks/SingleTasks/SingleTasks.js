@@ -28,8 +28,8 @@ const SingleTasks = (props) => {
                     </div>
                 </div>
                 
-                <div draggable onClick={()=>props.selectManyId(_id)} className="selection-icon">
-                        <FontAwesomeIcon className="" icon={faCheck} />
+                <div draggable onClick={(e)=>props.selectManyId(_id, e)} className="selection-icon">
+                        <FontAwesomeIcon className="check-icon" icon={faCheck} />
                     </div>
             </div>
         </div>
