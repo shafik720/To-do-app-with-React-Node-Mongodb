@@ -66,7 +66,11 @@ const Tasks = () => {
     return (
         <div className="task-div">
             <h3>You have <span className="text-secondary fw-bold">{tasks.length}</span>  tasks to complete</h3>
-            <button onClick={deleteMany}>Delete Many</button>
+            <div className="text-center">
+                <p>Total {taskId.length} task selected </p>
+                <button onClick={deleteMany}>Delete Many</button>
+            </div>
+            
             <div className="all-task">
                 {
                     tasks.map(index=><SingleTasks 
