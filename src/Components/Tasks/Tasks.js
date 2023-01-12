@@ -83,7 +83,16 @@ const Tasks = () => {
 
             <div className="all-task">
                 {
-                    tasks.map(index => <SingleTasks
+                    tasks.map(index => index.action == '' && <SingleTasks
+                        index={index}
+                        key={index._id}
+                        deleteSingleTask={deleteSingleTask}
+                        selectManyId={selectManyId}
+                    ></SingleTasks>)
+                }
+                <h4>Completed :</h4>
+                {
+                    tasks.map(index => index.action == 'complete' && <SingleTasks
                         index={index}
                         key={index._id}
                         deleteSingleTask={deleteSingleTask}

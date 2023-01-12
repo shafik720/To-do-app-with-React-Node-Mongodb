@@ -3,19 +3,18 @@ import './SingleTasks.css'; import { FontAwesomeIcon } from '@fortawesome/react-
 import { faTrash, faPen, faCheck } from '@fortawesome/free-solid-svg-icons';
 
 const SingleTasks = (props) => {
-    const { taskName, startTime, _id } = props.index;
+    const { taskName, startTime, _id ,action } = props.index;
 
     const [checked,setChecked] = useState(false);
-    function checkingCheckbox(){
-        // setChecked(!checked);
+    function checkingCheckbox(id){
+        console.log(id);
     }
 
     return (
         <div>
             <div className="single-task">
-
                 <div className="single-task-left w-100">
-                    <label  className={checked ? "containers active" : "containers"}>{taskName}
+                    <label  className={checked || action=='complete' ? "containers active" : "containers"}>{taskName} '&' {action}
                         <input onClick={()=>setChecked(!checked)} type="checkbox" name="" id=""/>
                         <span className="checkmark"></span>
                     </label>

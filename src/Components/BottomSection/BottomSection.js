@@ -11,6 +11,7 @@ const BottomSection = () => {
     // react hook form functionality
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
+        data.action = 'complete';
         //---------- adding data to mongodb
         fetch('http://localhost:5000/addTask',{
             method:'POST',
