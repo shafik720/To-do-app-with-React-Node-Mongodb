@@ -10,7 +10,7 @@ const SingleTasks = (props) => {
     return (
         <div>
             <div className="single-task">
-                <div className="single-task-left">
+                <div className="single-task-left w-100">
                     <label className="containers">{taskName}
                         <input type="checkbox" name="" id=""/>
                         <span className="checkmark"></span>
