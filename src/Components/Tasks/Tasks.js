@@ -53,6 +53,8 @@ const Tasks = () => {
         }
     }
 
+    
+        // console.log(tasks.length)
     // delete selected data 
     function deleteMany() {
         const proceed = window.confirm('Do you want to delete this task ? ');
@@ -73,9 +75,23 @@ const Tasks = () => {
                 .catch((error) => { console.error('Error:', error) });
         }
     }
+
+    // this will count the total number of incomplete task
+    let freshArr = [];
+    tasks.forEach(index=>{
+        if(index.action == 'incomplete'){
+            freshArr.push(index);
+        }
+    })
+    let freshArr2 = [];
+    tasks.forEach(index=>{
+        if(index.action == 'complete'){
+            freshArr2.push(index);
+        }
+    })
     return (
         <div className="task-div">
-            <h3>You have <span className="text-secondary fw-bold">{tasks.length}</span>  tasks to complete</h3>
+            <h3>You have <span className="text-secondary fw-bold">{freshArr.length}</span>  tasks to complete</h3>
             {taskId.length > 0 ? <div className="text-center selection-text">
                 <p>Total {taskId.length} task selected </p>
                 <button onClick={deleteMany}>Delete Selected Tasks</button>
@@ -90,7 +106,7 @@ const Tasks = () => {
                         selectManyId={selectManyId}
                     ></SingleTasks>)
                 }
-                <h4>Completed :</h4>
+                {freshArr2.length>0 && <span className="complete-task-label"><p>Completed :</p></span>}
                 {
                     tasks.map(index => index.action == 'complete' && <SingleTasks
                         index={index}
