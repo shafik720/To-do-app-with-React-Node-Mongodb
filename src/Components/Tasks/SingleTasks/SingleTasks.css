@@ -69,7 +69,7 @@
     border: 2px solid grey;
     width: 35px;
     height: 35px;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     background: white;
@@ -78,6 +78,9 @@
     position: absolute;
     top: -20px;
     left: -10px;
+}
+.single-task:hover .selection-icon{
+    display: flex;
 }
 .selection-icon:hover{
     background: darkcyan;
