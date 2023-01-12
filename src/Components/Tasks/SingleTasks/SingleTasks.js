@@ -15,7 +15,7 @@ const SingleTasks = (props) => {
             <div className="single-task">
                 <div className="single-task-left w-100">
                     <label  className={checked || action=='complete' ? "containers active" : "containers"}>{taskName} '&' {action}
-                        <input onClick={()=>setChecked(!checked)} type="checkbox" name="" id=""/>
+                        <input onClick={()=>{setChecked(!checked);checkingCheckbox(_id);}} type="checkbox" name="" id=""/>
                         <span className="checkmark"></span>
                     </label>
                 </div>
