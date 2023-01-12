@@ -9,7 +9,7 @@
     cursor: pointer;
     position: relative;
     min-height: 70px;
-    transition: all 0.1s ease;
+    /* transition: all 0.1s ease; */
 }
 .single-task:hover{
     border: 2px solid rgba(0,0,0,0.6);
@@ -79,7 +79,7 @@
     justify-content: center;
     align-items: center;
     background: white;
-    transition: all 0.2s ease;
+    /* transition: all 0.2s ease; */
     border-radius: 50%;
     position: absolute;
     top: -20px;
