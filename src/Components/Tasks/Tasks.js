@@ -37,10 +37,6 @@ const Tasks = () => {
         if (!existedId) {
             arr = [...taskId, id];
             setTaskId(arr);
-        }else{
-            // let remainingId = taskId.filter(index=> index != id);
-            // arr = [remainingId];
-            // setTaskId(arr);
         }
 
         if (e.target.classList.contains('selected')) {
@@ -56,6 +52,8 @@ const Tasks = () => {
             e.target.parentNode.classList.add('selected');
         }
     }
+
+    // delete selected data 
     function deleteMany() {
         const proceed = window.confirm('Do you want to delete this task ? ');
         const ids = taskId;
