@@ -38,7 +38,9 @@ const Tasks = () => {
             arr = [...taskId, id];
             setTaskId(arr);
         }else{
-            
+            // let remainingId = taskId.filter(index=> index != id);
+            // arr = [remainingId];
+            // setTaskId(arr);
         }
 
         if (e.target.classList.contains('selected')) {
