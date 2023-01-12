@@ -118,7 +118,10 @@
     user-select: none;
     text-transform: capitalize;
   }
-  
+  .containers.active{
+      text-decoration: line-through;
+  }
+
   /* Hide the browser's default checkbox */
   .containers input {
     position: absolute;
