@@ -45,15 +45,20 @@ const SingleTasks = (props) => {
                 </div>
                 <div className="hover-content">
                     <div className="hover-content-second">
-                        <div className="delete-task-button">
+
+                        {/* ------------ Task edit button --------------- */}
+                        <div onClick={() => props.editTask(_id)} draggable className="delete-task-button">
                             <FontAwesomeIcon className="task-edit-button" icon={faPen} />
                         </div>
+
+                        {/* ------------ Task delete button --------------- */}
                         <div onClick={() => props.deleteSingleTask(_id)} draggable className="delete-task-button">
                             <FontAwesomeIcon className="" icon={faTrash} />
                         </div>
                     </div>
                 </div>
                 
+                {/* ------------ Task selection button --------------- */}
                 <div draggable onClick={(e)=>props.selectManyId(_id, e)} className="selection-icon">
                         <FontAwesomeIcon className="check-icon" icon={faCheck} />
                     </div>

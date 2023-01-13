@@ -12,6 +12,7 @@ const Tasks = () => {
             .then(data => setTasks(data))
     }, [tasks]);
 
+    // this function will delete individual task
     const deleteSingleTask = (id) => {
         const proceed = window.confirm('Do you want to delete this task ? ');
         if (proceed) {
@@ -27,6 +28,11 @@ const Tasks = () => {
                     }
                 })
         }
+    }
+
+    // this function will edit task
+    function editTask(id){
+        console.log(id);
     }
 
     const [taskId, setTaskId] = useState([]);
@@ -54,7 +60,7 @@ const Tasks = () => {
     }
 
     
-        // console.log(tasks.length)
+        
     // delete selected data 
     function deleteMany() {
         const proceed = window.confirm('Do you want to delete this task ? ');
@@ -98,12 +104,14 @@ const Tasks = () => {
             </div> : <></>}
 
             <div className="all-task">
+                {/* ------ all incomplete task will show here ------ */}
                 {
                     tasks.map(index => index.action == 'incomplete' && <SingleTasks
                         index={index}
                         key={index._id}
                         deleteSingleTask={deleteSingleTask}
                         selectManyId={selectManyId}
+                        editTask={editTask}
                     ></SingleTasks>)
                 }
                 {freshArr2.length>0 && <span className="complete-task-label"><p>Completed :</p></span>}
