@@ -3,12 +3,10 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import SingleTasks from './SingleTasks/SingleTasks';
 import { useForm } from "react-hook-form";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMultiply } from '@fortawesome/free-solid-svg-icons';
+
 
 import './Tasks.css';
 import { useNavigate } from 'react-router';
-import EditTask from './EditTask/EditTask';
 
 const Tasks = () => {
     const [tasks, setTasks] = useState([]);
@@ -49,17 +47,8 @@ const Tasks = () => {
         // })
 
 
-        document.querySelector('.popup-parent').classList.add('active');
-        
-        // closing the popup when user click the close button at the top right corner of the modal
-        document.querySelector('.popup-close-button').addEventListener('click',()=>{
-            document.querySelector('.popup-parent').classList.remove('active');
-            navigate(`/`);
-        });
-
     }
-    const { register, handleSubmit } = useForm();
-    const onSubmit = data => console.log(data);
+
 
     // -------------------- task selection function
     const [taskId, setTaskId] = useState([]);
@@ -150,22 +139,7 @@ const Tasks = () => {
                         selectManyId={selectManyId}
                     ></SingleTasks>)
                 }
-            </div>
-
-            <div className="popup-parent">
-                <div className="popup-model">
-                    <h2 className='text-center my-4 fw-bold'>Add a New Task</h2>
-                    <form className='submit-form' >
-                        <p className='label-for-task'>Task Name</p>
-                        <input {...register("taskName", { required: true, maxLength: 20 })} />
-                        <p className='label-for-task'>Start Time</p>
-                        <input  type="time" {...register("startTime", { min: 18, max: 99 })} />
-                        <input className='submit-task-button' type="submit" />
-                    </form>
-                    <span className='popup-close-button'><FontAwesomeIcon className="" icon={faMultiply} /></span>
-                    <EditTask></EditTask>
-                </div>
-            </div>
+            </div>   
         </div>
     );
 };
