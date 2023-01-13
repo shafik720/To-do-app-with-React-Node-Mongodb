@@ -12,7 +12,7 @@ const Tasks = () => {
             .then(data => setTasks(data))
     }, [tasks]);
 
-    // this function will delete individual task
+    //---------------------- this function will delete individual task
     const deleteSingleTask = (id) => {
         const proceed = window.confirm('Do you want to delete this task ? ');
         if (proceed) {
@@ -30,11 +30,13 @@ const Tasks = () => {
         }
     }
 
-    // this function will edit task
+    //-------------------- this function will edit task
     function editTask(id){
         console.log(id);
+        
     }
 
+    // -------------------- task selection function
     const [taskId, setTaskId] = useState([]);
     let arr = [];
     function selectManyId(id, e) {
@@ -61,7 +63,7 @@ const Tasks = () => {
 
     
         
-    // delete selected data 
+    //----------------- delete selected data 
     function deleteMany() {
         const proceed = window.confirm('Do you want to delete this task ? ');
         const ids = taskId;
@@ -82,7 +84,7 @@ const Tasks = () => {
         }
     }
 
-    // this will count the total number of incomplete task
+    //----------- this will count the total number of incomplete task
     let freshArr = [];
     tasks.forEach(index=>{
         if(index.action == 'incomplete'){
