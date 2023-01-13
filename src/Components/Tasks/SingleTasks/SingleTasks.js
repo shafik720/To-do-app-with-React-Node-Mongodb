@@ -7,7 +7,7 @@ const SingleTasks = (props) => {
 
     const [checked,setChecked] = useState(false);
     function checkingCheckbox(id, actions){
-        console.log(actions);
+        // console.log(actions);
         let action = '';
         // const action = checked ? 'complete' : 'incomplete';
         if(actions == 'incomplete' ){

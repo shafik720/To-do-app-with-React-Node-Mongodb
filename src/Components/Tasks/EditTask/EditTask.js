@@ -19,7 +19,7 @@ const EditTask = () => {
         .then(res=>res.json())
         .then(data=>{
             alert('Successfully Edited');
-            console.log(data);
+            navigate(`/`);
         })
     };
     const navigate = useNavigate();
