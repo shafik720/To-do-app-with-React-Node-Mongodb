@@ -30,6 +30,7 @@ const SingleTasks = (props) => {
         })
     }
 
+    // to trigger the edit task button if the task is incomplete only
     let editTask;
     if(action == 'incomplete'){
         editTask = props.editTask;
@@ -55,9 +56,9 @@ const SingleTasks = (props) => {
                     <div className="hover-content-second">
 
                         {/* ------------ Task edit button --------------- */}
-                        <div onClick={() =>editTask(_id)} draggable className="delete-task-button">
+                        { action == 'incomplete' && <div onClick={() =>editTask(_id)} draggable className="delete-task-button">
                             <FontAwesomeIcon className="task-edit-button" icon={faPen} />
-                        </div>
+                        </div>}
 
                         {/* ------------ Task delete button --------------- */}
                         <div onClick={() => props.deleteSingleTask(_id)} draggable className="delete-task-button">
