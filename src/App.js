@@ -8,7 +8,6 @@ import AppMainPage from './Components/AppMainPage/AppMainPage';
 function App() {
   return (
     <div className="main-div">
-      
       <Routes>
         <Route path='/' element={<AppMainPage></AppMainPage>}></Route>
         <Route path='/editTask/:id' element={<EditTask></EditTask>}></Route>

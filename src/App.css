@@ -46,3 +46,6 @@
   border-radius: 5px;
   min-height: 80vh;
 }
+.main-div.active{
+  background: #90B8F3;   
+}

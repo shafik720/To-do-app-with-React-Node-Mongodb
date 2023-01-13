@@ -10,16 +10,19 @@ const EditTask = () => {
     const onSubmit = data => console.log(data);
     const navigate = useNavigate();
 
+    document.querySelector('.main-div').classList.add('active');
     
     function backToApp(){
         navigate(`/`);
+        
+        document.querySelector('.main-div').classList.remove('active');
     }
     return (
         <div>
-            <h2 className="text-danger">Edit your task here : {id} </h2>
+            {/* <h2 className="text-danger">Edit your task here : {id} </h2> */}
             <div className="popup-parent active">
                 <div className="popup-model">
-                    <h2 className='text-center my-4 fw-bold'>Add a New Task</h2>
+                    <h2 className='text-center my-4 fw-bold'>Edit your task here : {id}</h2>
                     <form className='submit-form' >
                         <p className='label-for-task'>Task Name</p>
                         <input {...register("taskName", { required: true, maxLength: 20 })} />
