@@ -147,11 +147,14 @@
   
   /* On mouse-over, add a grey background color */
   .containers:hover input ~ .checkmark {
-    background-color: #ccc;
+    background-color: #90B8F3;
   }
   
   /* When the checkbox is checked, add a blue background */
-  .containers input:checked ~ .checkmark {
+  /* .containers input:checked ~ .checkmark {
+    background-color: #2196F3;
+  } */
+  .containers.active  .checkmark {
     background-color: #2196F3;
   }
   
@@ -163,7 +166,7 @@
   }
   
   /* Show the checkmark when checked */
-  .containers input:checked ~ .checkmark:after {
+  .containers.active   .checkmark:after {
     display: block;
   }
   
