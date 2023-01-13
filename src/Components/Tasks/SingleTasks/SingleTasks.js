@@ -30,6 +30,14 @@ const SingleTasks = (props) => {
         })
     }
 
+    let editTask;
+    if(action == 'incomplete'){
+        editTask = props.editTask;
+    }else{
+        editTask = ()=>{
+            // console.log('');
+        }
+    }
     return (
         <div>
             <div className="single-task">
@@ -47,7 +55,7 @@ const SingleTasks = (props) => {
                     <div className="hover-content-second">
 
                         {/* ------------ Task edit button --------------- */}
-                        <div onClick={() => props.editTask(_id)} draggable className="delete-task-button">
+                        <div onClick={() =>editTask(_id)} draggable className="delete-task-button">
                             <FontAwesomeIcon className="task-edit-button" icon={faPen} />
                         </div>
 
