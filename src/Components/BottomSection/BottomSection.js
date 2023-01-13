@@ -8,7 +8,7 @@ import { useForm } from 'react-hook-form';
 
 
 const BottomSection = () => {
-    // react hook form functionality
+    //---------------- react hook form functionality
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         data.action = 'incomplete';
