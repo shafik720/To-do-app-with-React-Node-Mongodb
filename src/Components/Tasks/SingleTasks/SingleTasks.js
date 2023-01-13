@@ -56,6 +56,7 @@ const SingleTasks = (props) => {
                     <div className="hover-content-second">
 
                         {/* ------------ Task edit button --------------- */}
+                        {/* task edit button will be only showen if the task is incomplete */}
                         { action == 'incomplete' && <div onClick={() =>editTask(_id)} draggable className="delete-task-button">
                             <FontAwesomeIcon className="task-edit-button" icon={faPen} />
                         </div>}
