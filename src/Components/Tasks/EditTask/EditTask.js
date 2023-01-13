@@ -8,7 +8,19 @@ const EditTask = () => {
     const { id } = useParams();
     const { register, handleSubmit, setValue  } = useForm();
     const onSubmit = data => {
-        console.log(data)
+        data.action = 'incomplete';
+        console.log(data);
+        const url = `http://localhost:5000/singleTaskEdit/${id}`;
+        fetch(url, {
+            method : "PUT",
+            headers : {'content-type' : 'application/json' },
+            body : JSON.stringify(data)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            alert('Successfully Edited');
+            console.log(data);
+        })
     };
     const navigate = useNavigate();
     
